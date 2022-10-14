@@ -1,0 +1,31 @@
+{
+    "name": "Matlab",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "matlab.mlintpath": "/opt/matlab/R2022b/bin/glnxa64/mlint"
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "Gimly81.matlab",
+                "apommel.matlab-interactive-terminal",
+                "tomoki1207.pdf"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8888
+    ],
+    "containerEnv": {
+        "MLM_LICENSE_FILE": "/workspaces/it6-cr/license/license.lic"
+    },
+    "runArgs": [
+        "--mac-address=02:42:ac:11:00:FE"
+    ]
+}

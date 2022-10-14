@@ -1,0 +1,14 @@
+{
+    "name": "Typescript",
+    "build": {
+        "dockerfile": "Dockerfile",
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "vue.volar",
+            ]
+        }
+    },
+}
